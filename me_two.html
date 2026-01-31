@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+        <style type="text/css">
+            /* html or body sets it for the entire page */
+            body {font-family: "Google Sans Flex", sans-serif}
+            h1,h2 {margin-bottom: 30px; color:#3e8ede}
+            /* TODO Need to center this correctly */
+            .list { box-sizing:border-box; }
+            ul {display:block; width: 200px; border:20px solid #3e8ede; margin: 0 auto;}
+            /* TODO Not sure what it means to put the div using a background image*/
+            div.combineddiv {display:inline-block;}
+            div.fooddiv {display:inline-block; background-image: url("tonkotsuramen.jpg"); width:30%; height:auto;}
+            /* TODO Explanatory text in a div that is adjacent to it*/
+            div.describediv {display:inline-block; width:40%;}
+            /*Zebra Striping for the Table*/
+            tr:nth-child(even) {background-color: #74a7db;}
+            /*Right align the labels*/
+            span.leftCol {display:inline-block; width: 50%;}
+            span.rightCol {display:inline-block; width: 50%;}
+            label {display:block; text-align: right;}
+            /* Put the border here just to figure out what is going on */
+            div.formDiv {display:block; width: 500px; margin: 0 auto;}
+            div.icons {position: fixed; right: 35px; top: 100px}
+        </style>
+    </head>
+    <body>
+        <div class="icons">
+            <img src="facebook.png" height="50px" width="auto">
+            <img src="twitter.png" height="50px" width="auto">
+        </div>
+        <h1>Kavin Kang</h1>
+        <p>In 2024, I took a trip to Singapore to visit my sister's family.
+            For someone who is illiterate in Mandarin, it was a welcome relief
+            to go somewhere in Asia where English was the lingua franca.
+            In addition to Singapore, I also visited Malaysia, which was the
+            first time I stepped on the Asian continent proper (the past times
+            were on islands).
+        </p>
+        <br/>
+        <div class="list">
+        <ul>
+            <li>A dog named Sirius</li>
+            <li>A rabbit named Oswald</li>
+            <li>A cat named Cheshire</li>
+        </ul>
+        </div>
+        <br/>
+        <a href="https://laosichuan.com/" target="_blank">My Favorite Chinese Restaurant in the Boston Area</a>
+        <br/>
+        <br/>
+        <!-- TODO: Not sure what a div using a background image means -->
+        <div class="combinediv">
+            <div class="fooddiv">
+                <img src="tonkotsuramen.jpg" width="50%" height="auto">
+            </div>
+            <div class="describediv">
+                One of my favorite meals is tonkotsu ramen. It needs to have the pork,
+                a savory broth, and chewy noodles. One thing I would like to avoid
+                in my ramen are bamboo shoots, it doesn't have a pleasant smell or taste to it.
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>Book Name</th>
+                <th>Cover Art</th>
+                <th>Author</th>
+                <th>Summary of Book</th>
+            </tr>
+            <!-- Book 1 -->
+            <tr>
+                <td>The Bad Beginning</td>
+                <td><img src="thebadbeginning.jpg" width="25%" height="auto"></td>
+                <td>Lemony Snicket</td>
+                <td>Three children lose their parents and everything they own in a fire.
+                    They are soon forced to live with someone who has malicious intentions
+                    to steal their fortunes.
+                </td>
+            </tr>
+            <!-- Book 2 -->
+            <tr>
+                <td>Creativity Inc.</td>
+                <td><img src="creativityinc.jpg" width="25%" height="auto"></td>
+                <td>Ed Catmull</td>
+                <td>The former president of Pixar talks about how he got into the industry
+                    of computer graphics and the formation of Pixar. He talks about the 
+                    challenges of running a new animation studio and producing animated films
+                    in the newly developed medium of computer animation.
+                </td>
+            </tr>
+            <!-- Book 3 -->
+            <tr>
+                <td>Impossible Creatures</td>
+                <td><img src="impossiblecreatures.jpg" width="25%" height="auto"></td>
+                <td>Katherine Rundell</td>
+                <td>A young boy Christopher discovers a new land called the Archipelago.
+                    He teams up with a girl named Mal who is being chased down by someone
+                    and they go on an adventure to restore the magic of the land.
+                </td>
+            </tr>
+            <!-- Book 4 -->
+            <tr>
+                <td>Secrets of the Silent Witch Vol.1</td>
+                <td><img src="secretsofthesilentwitchvol1.jpg" width="25%" height="auto"></td>
+                <td>Matsuri Isora</td>
+                <td>Monica Everett is one of the Seven Mages of Ridill, the Silent Witch.
+                    She is tasked to secretly protect the Second Prince of Ridill at his
+                    boarding school. However, Monica suffers from social anxiety and has to 
+                    navigate the typical life of a student.
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <div class="formDiv">
+        <form>
+            <span class="leftCol"><label>Guest Book</label></span><span class="rightCol">&nbsp;</span><br/>
+            <!-- TODO Not sure how to do the columns without using a table -->
+            <!-- Double down on the span, at least it keeps it on the same line-->
+            <span class="leftCol"><label>First Name</label></span><span class="rightCol"><input type="text" name="firstName"></span><br/>
+            <span class="leftCol"><label>Last Name</label></span><span class="rightCol"><input type="text" name="lastName"></span><br/>
+            <span class="leftCol"><label>Email</label></span><span class="rightCol"><input type="text" name="email"></span><br/>
+            <span class="leftCol"><label>City</label></span><span class="rightCol"><input type="text" name="city"></span><br/>
+            <span class="leftCol"><label>State</label></span>
+            <span class="rightCol"><select name="state">
+                <option>Connecticut</option>
+                <option>Maine</option>
+                <option>Massachusetts</option>
+                <option>New Hampshire</option>
+                <option>Rhode Island</option>
+                <option>Vermont</option>
+            </select></span><br/>
+            <input type="submit" action="#" method="GET" value="Send">
+        </form>
+        </div>
+    </body>
+</html>
