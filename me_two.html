@@ -7,21 +7,17 @@
             /* html or body sets it for the entire page */
             body {font-family: "Google Sans Flex", sans-serif}
             h1,h2 {margin-bottom: 30px; color:#3e8ede}
-            /* TODO Need to center this correctly */
             .list { box-sizing:border-box; }
             ul {display:block; width: 200px; border:20px solid #3e8ede; margin: 0 auto;}
-            /* TODO Not sure what it means to put the div using a background image*/
-            div.combineddiv {display:inline-block;}
-            div.fooddiv {display:inline-block; background-image: url("tonkotsuramen.jpg"); width:30%; height:auto;}
-            /* TODO Explanatory text in a div that is adjacent to it*/
-            div.describediv {display:inline-block; width:40%;}
+            div.combineddiv {display:inline-block; position:relative; vertical-align: top;}
+            div.fooddiv {display:inline-block; background-image: url("tonkotsuramen.jpg"); background-size:cover; background-repeat: no-repeat; width:30%; height:40%;}
+            div.describediv {display:inline-block; width:40%; vertical-align: top;}
             /*Zebra Striping for the Table*/
             tr:nth-child(even) {background-color: #74a7db;}
             /*Right align the labels*/
-            span.leftCol {display:inline-block; width: 50%;}
-            span.rightCol {display:inline-block; width: 50%;}
+            span.leftCol {display:inline-block; width: 45%;}
+            span.rightCol {display:inline-block; width: 45%;}
             label {display:block; text-align: right;}
-            /* Put the border here just to figure out what is going on */
             div.formDiv {display:block; width: 500px; margin: 0 auto;}
             div.icons {position: fixed; right: 35px; top: 100px}
         </style>
@@ -51,10 +47,9 @@
         <a href="https://laosichuan.com/" target="_blank">My Favorite Chinese Restaurant in the Boston Area</a>
         <br/>
         <br/>
-        <!-- TODO: Not sure what a div using a background image means -->
         <div class="combinediv">
             <div class="fooddiv">
-                <img src="tonkotsuramen.jpg" width="50%" height="auto">
+                &nbsp;
             </div>
             <div class="describediv">
                 One of my favorite meals is tonkotsu ramen. It needs to have the pork,
@@ -116,7 +111,6 @@
         <div class="formDiv">
         <form>
             <span class="leftCol"><label>Guest Book</label></span><span class="rightCol">&nbsp;</span><br/>
-            <!-- TODO Not sure how to do the columns without using a table -->
             <!-- Double down on the span, at least it keeps it on the same line-->
             <span class="leftCol"><label>First Name</label></span><span class="rightCol"><input type="text" name="firstName"></span><br/>
             <span class="leftCol"><label>Last Name</label></span><span class="rightCol"><input type="text" name="lastName"></span><br/>
@@ -131,7 +125,10 @@
                 <option>Rhode Island</option>
                 <option>Vermont</option>
             </select></span><br/>
+            <span class="leftCol"></span>
+            <span class="rightCol">
             <input type="submit" action="#" method="GET" value="Send">
+            </span>
         </form>
         </div>
     </body>
